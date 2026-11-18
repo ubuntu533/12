@@ -1,10 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="jupyter-code-library",
-    version="0.1.0",
-    packages=["jupyter_code_library"],
-    package_dir={"jupyter_code_library": "."},
-    package_data={"jupyter_code_library": ["programs/*.py"]},
+    version="0.1.1",
+    packages=find_packages(),
     include_package_data=True,
+    package_data={
+        "jupyter_code_library": ["programs/*.py"]
+    }
 )
